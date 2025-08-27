@@ -14,6 +14,8 @@
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/charts.js'])
+        @livewireStyles
+        <script defer src="//unpkg.com/alpinejs"></script>
     </head>
     <body class="font-sans antialiased">
         <div class="flex h-screen">
@@ -36,5 +38,6 @@
                 </main>
             </div>
         </div>
+        @livewireScripts
     </body>
 </html>

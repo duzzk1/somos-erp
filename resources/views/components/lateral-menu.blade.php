@@ -20,8 +20,8 @@
             <a href="/dashboard" class="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:bg-gray-700 hover:rounded-lg transition duration-150 ease-in-out">
                 Dashboard
             </a>
-            <a href="/outra-pagina" class="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:bg-gray-700 hover:rounded-lg transition duration-150 ease-in-out mt-1">
-                Outra Página
+            <a href="/oportunidades" class="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:bg-gray-700 hover:rounded-lg transition duration-150 ease-in-out mt-1">
+                Oportunidades
             </a>
         </nav>
     </div>
