@@ -42,7 +42,7 @@ COPY . .
 RUN composer install --optimize-autoloader --no-dev
 RUN rm -rf node_modules package-lock.json
 RUN npm install --legacy-peer-deps
-RUN npm run build
+RUN npm run dev
 
 # 8. Permissões de arquivo
 # Garante que o diretório seja de propriedade do usuário www-data
