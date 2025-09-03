@@ -1,6 +1,6 @@
-<div x-show="open" class="fixed inset-0 z-50 overflow-y-auto" style="display: none;">
+<div x-show="openEditModal" class="fixed inset-0 z-50 overflow-y-auto" style="display: none;">
     <div class="flex items-center justify-center min-h-screen p-4">
-        <div @click="open = false" class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+        <div @click="openEditModal = false" class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl overflow-hidden transform transition-all sm:my-8 sm:w-full sm:max-w-xl z-50">
             <div class="px-6 py-4">
                 <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
@@ -9,7 +9,6 @@
             </div>
             <div class="px-6 py-4">
                 <form action="{{ route('oportunidades.update', $oportunidade->guid ?? '') }}" method="POST">
-                    {{ $oportunidade }}
                     @csrf
                     @method('PUT')
                     <div class="grid grid-cols-1 gap-6">
@@ -39,7 +38,7 @@
                         </div>
                     </div>
                     <div class="mt-6 flex justify-end space-x-3">
-                        <button type="button" @click="open = false" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <button type="button" @click="openEditModal = false" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Cancelar
                         </button>
                         <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">

@@ -4,11 +4,21 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Str;
 
 class Oportunidades extends Model
 {
     use HasFactory;
+    protected static function boot()
+    {
+        parent::boot();
 
+        static::creating(function ($oportunidade) {
+            $oportunidade->guid = (string) Str::uuid();
+            $oportunidade->dataCriacao = now();
+            $oportunidade->dataAtualizacao = now();
+        });
+    }
     /**
      * Define o nome da tabela no banco de dados.
      * Por padrão, o Eloquent assume o nome da classe no plural (oportunidades).

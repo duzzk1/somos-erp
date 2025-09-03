@@ -1,1 +1,1 @@
-<img src="{{ asset('images/somos-blue.svg') }}" alt="Somos logo azul">
+<img src="{{ asset('images/adapta-azul.webp') }}" alt="Adapta logo azul">

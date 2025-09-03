@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* No seu arquivo CSS principal */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.h-8 {
+  height: 2rem; /* 32px */
+}
+
+.w-8 {
+  width: 2rem; /* 32px */
+}

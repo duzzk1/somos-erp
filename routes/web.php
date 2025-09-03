@@ -1,19 +1,15 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\OportunidadesController;
 use App\Http\Controllers\ProfileController;
-use App\Jobs\ImportarOportunidadesJob;
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
+    if (Auth::check()) {
+        return redirect()->route('dashboard.calls');
+    }
     return redirect()->route('login');
 });
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/oportunidades', [OportunidadesController::class, 'index'])
-    ->name('oportunidades.index')
-    ->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -21,6 +17,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::put('/oportunidades/{oportunidades}', [OportunidadesController::class, 'update'])->name('oportunidades.update');
-
 require __DIR__.'/auth.php';
+require __DIR__.'/api.php';
+require __DIR__.'/dashboard.php';
+require __DIR__.'/oportunidade.php';
+require __DIR__.'/clientes.php';
+require __DIR__.'/status.php';
+require __DIR__.'/user.php';
