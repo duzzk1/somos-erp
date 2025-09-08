@@ -16,7 +16,7 @@
     @livewireStyles
     <script defer src="//unpkg.com/alpinejs"></script>
 </head>
-<body class="font-sans antialiased bg-gray-100">
+<body class="font-sans antialiased bg-gray-900 text-white">
     <div x-data="{ sidebarOpen: true }" class="flex min-h-screen w-full">
         <!-- Menu lateral minimizável -->
        

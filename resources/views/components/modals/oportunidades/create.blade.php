@@ -3,7 +3,7 @@
         <div @click="openCreateModal = false" class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl overflow-hidden transform transition-all sm:my-8 sm:w-full sm:max-w-xl z-50">
             <div class="px-6 py-4">
-                <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">
                     Criar Oportunidade
                 </h3>
             </div>
@@ -22,7 +22,7 @@
                         </div>
                         <div>
                             <x-modal-grid-select
-                                class="required"
+                                class="required "
                                 name="status"
                                 label="Status"
                                 api-url="{{ route('status.searchStatus') }}"
@@ -32,11 +32,11 @@
                         </div>
                         <div>
                             <label for="observacoesEstrategia" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Observações</label>
-                            <textarea name="observacoesEstrategia" id="observacoesEstrategia" rows="4" class="mt-1 block w-full rounded-md border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"></textarea>
+                            <textarea name="observacoesEstrategia" id="observacoesEstrategia" rows="4" class="mt-1 block w-full rounded-md border-gray-300 dark:bg-gray-700 dark:border-gray-600 "></textarea>
                         </div>
                         <div>
                             <label for="valorTotal" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Valor Total</label>
-                            <input type="number" step="0.01" name="valorTotal" id="valorTotal" value="" class="mt-1 block w-full rounded-md border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200">
+                            <input type="number" step="0.01" name="valorTotal" id="valorTotal" value="" class="mt-1 block w-full rounded-md border-gray-300 dark:bg-gray-700 dark:border-gray-600 text-gray-900">
                         </div>
                         <div>
                             <x-modal-grid-select

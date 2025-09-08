@@ -91,10 +91,10 @@ class ImportarApiLuggiaData implements ShouldQueue, ShouldBeUnique
     }
 
     private function import() {
-        // Importa os dados dos clientes
-        $this->importClientData();
         // Importa os dados das oportunidades
         $this->importOportunidadesData();
+        // Importa os dados dos clientes
+        $this->importClientData();
     }
 
     public function handle()

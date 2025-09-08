@@ -61,7 +61,7 @@
                                                 <td title="{{ $cliente->email ?? 'N/A' }}" class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-200">
                                                     {{ Str::limit($cliente->email ?? 'N/A', 32) }}
                                                 </td>
-                                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium text-gray-900">
                                                     <a href="#" @click="openEditModal = true">Editar</a>
                                                     <a href="#" class="text-red-600 hover:text-red-900 ml-4">Excluir</a>
                                                 </td>
